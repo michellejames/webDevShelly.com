@@ -8,6 +8,10 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+  <?php 
+
+    $logo = get_field("main_logo", "option");
+  ?>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid navbar-container">
@@ -20,7 +24,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img class="img-fluid navbar-logo" alt="Brand" src="wp-content/uploads/2017/10/mjlogo-300x207.png">
+        <img class="img-fluid navbar-logo" alt="Brand" src="<?php echo $logo; ?>">
       </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
