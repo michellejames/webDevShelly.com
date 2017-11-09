@@ -1,6 +1,21 @@
 
-var i = 0;
+jQuery( document ).ready(function( $ ) {
+    console.log( "ready!" );
 
-i += 1;
+    $(".filter-link").click(function (e) {
+    	e.preventDefault();
+    	if (!$(this).hasClass("show-all")) {
+			var term = $(this).attr("data-id");
+	    	$(".work-pieces").hide();
+	    	$("."+term).fadeIn();
+    	} else {
+    		$(".work-pieces").fadeIn();
+    	}
+    	
+    })
 
-console.log("i = " + i);
+
+
+
+});
+

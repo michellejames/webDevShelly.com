@@ -5,8 +5,8 @@
 
 	<?php get_header(); ?>
 	<div class="background-image" style="background-image: url(<?php echo $backgroundImage; ?>)">
-		<h2 class="typography">Welcome</h2>
-	</div>
+<!-- 		<h2 class="typography">Welcome</h2>
+ -->	</div>
 
 	<div class="header-section">
 		<div class="profile-picture" style="background-image: url(<?php the_field("headshot"); ?>)"></div>

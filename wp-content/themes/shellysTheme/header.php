@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <?php 
 
     $logo = get_field("main_logo", "option");
@@ -33,9 +33,9 @@
       	<?php
       		$menu_items = wp_get_nav_menu_items("Main Navigation");
       		foreach ($menu_items as $mi) {
-				$title = $mi -> title;
-				$url = $mi -> url;
-				echo '<li><a href="' . $url . '#">' . $title . '</a></li>';
+    				$title = $mi -> title;
+    				$url = $mi -> url;
+    				echo '<li><a href="' . $url . '#">' . $title . '</a></li>';
       		}
       		//print_r($menu_items);
       	?>
